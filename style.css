@@ -1,0 +1,77 @@
+body {
+    background-color: #000033;
+}
+
+#bodyContent {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h1 {
+    color: #FFD700;
+    text-align: center;
+}
+
+a {
+    margin-right: 10px;
+    color: #FFD700;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 220px;
+    height: 250px;
+    border: 3px solid #FFD700;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    color: #FFFFFF;
+    background-color: #1A265F;
+}
+
+.nameCard {
+    margin-left: 7px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+#contactDiv {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    color: #FFFFFF;
+}
+
+.card-body {
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.card-body>img {
+    margin-bottom: 5px;
+}
+
+.btn {
+    color: #FFD700;
+    background-color: #000033;
+}
+
+.about {
+    color: #FFFFFF;
+    text-align: left;
+    margin-left: 9px;
+    margin-right: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.searchAreaGraph {
+    display: none;
+}
