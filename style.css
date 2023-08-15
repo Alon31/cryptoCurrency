@@ -75,3 +75,50 @@ a {
 .searchAreaGraph {
     display: none;
 }
+
+/*  Mobile */
+@media(max-width: 480px) {
+    .nav{
+        display: flex;
+        justify-content: center;
+    }
+    .searchArea, .searchAreaGraph{
+        margin-top: 10px;
+    }
+    .card{
+        width: 160px;
+    }
+    .about{
+        width: 300px;
+        font-size: 14px;
+    }
+    #liveReportsDiv{
+        width: 95vw;
+        height: 35vh;
+        margin: 10px;
+    }
+    
+}
+
+@media(max-width: 530px) {
+    .nav{
+        display: flex;
+        justify-content: center;
+    }
+    .searchArea, .searchAreaGraph{
+        margin-top: 10px;
+    }
+    .card{
+        width: 160px;
+    }
+    .about{
+        width: 300px;
+        font-size: 14px;
+    }
+    #liveReportsDiv{
+        width: 95vw;
+        height: 35vh;
+        margin: 10px;
+    }
+    
+}
