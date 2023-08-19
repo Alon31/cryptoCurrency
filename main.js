@@ -81,7 +81,7 @@ $(() => {
 
     let html = ""
 
-    for (const coin of currentCoins)
+    for (const coin of currentCoins) {
       html += `
           <div class="card">
             <div class="nameCard">
