@@ -1,29 +1,39 @@
-/// <reference path="jquery-3.6.1.js" />
+// Include the jQuery library for DOM manipulation and event handling.
+// <reference path="jquery-3.6.1.js" />
+
+// Enforce strict mode for error checking and better coding practices.
 "use strict"
 
+// Execute the following when the DOM is ready.
 $(() => {
+
+  // Assign event handlers to various buttons/links.
   $("#currenciesLink").click(displayCoins);
   $("#liveReports").click(liveReports);
   $("#aboutLink").click(aboutLink);
 
+  // Initialize variables for holding coins and search results.
   let coins;
   let searchCoinByUser;
   let searchCoinByUserGraph;
-  let coinLive = [];
   let graph = {};
   let intervalGraph;
 
 
+  // Define an async function to fetch JSON data from a given URL.
   async function getJson(url) {
     try {
+      // Use the Fetch API to get the data.
       const response = await fetch(url);
       const json = await response.json();
       return json;
     } catch (err) {
+      // If there's an error, display an alert.
       alert("please try again later.");
     }
   }
 
+  // Define an async function to load and display coin data.
   async function loadCoins() {
     try {
       const result = await getJson("https://api.coingecko.com/api/v3/coins/");
@@ -34,6 +44,7 @@ $(() => {
     }
   }
 
+  // Load coins when the script runs.
   loadCoins();
 
   $("#searchCoinsButton").click(() => {
@@ -70,9 +81,7 @@ $(() => {
 
     let html = ""
 
-    for (const coin of currentCoins) {
-      currentCoins = coinLive;
-
+    for (const coin of currentCoins)
       html += `
           <div class="card">
             <div class="nameCard">
