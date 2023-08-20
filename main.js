@@ -47,18 +47,21 @@ $(() => {
   // Load coins when the script runs.
   loadCoins();
 
+  // Event handler for the searchCoinsButton button click
   $("#searchCoinsButton").click(() => {
     const clientValue = $("#boxSearch").val();
     searchCoinByUser = coins.filter(coins => coins.symbol.toUpperCase() === clientValue.toUpperCase());
     displayCoins();
   });
 
+  // Event handler for the searchCoinsButtonGraph button click
   $("#searchCoinsButtonGraph").click(() => {
     const clientValueGraph = $("#boxSearchGraph").val();
     searchCoinByUserGraph = coins.filter(coins => coins.symbol.toUpperCase() === clientValueGraph.toUpperCase());
     liveReports();
   });
 
+  // Function to display coin data
   function displayCoins() {
     let currentCoins;
 
@@ -110,6 +113,7 @@ $(() => {
     $("#contactDiv").append(html);
   }
 
+  // Function to display live coin reports/graphs
   function liveReports() {
     clearInterval(intervalGraph);
     searchCoinByUser = undefined;
@@ -168,6 +172,7 @@ $(() => {
     }
   }
 
+  // Function to render the live graph using fetched data
   function paintGraphOnCanvas(data) {
     let graphData = [];
 
@@ -195,6 +200,7 @@ $(() => {
     $("#liveReportsDiv").CanvasJSChart(graph);
   }
 
+  // Function to display an about section
   function aboutLink() {
     clearInterval(intervalGraph);
     $("#contactDiv").empty();
