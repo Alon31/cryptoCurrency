@@ -87,6 +87,7 @@ a {
     }
     .card{
         width: 160px;
+        height: 10px;
     }
     .about{
         width: 300px;
