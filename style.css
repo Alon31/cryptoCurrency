@@ -1,4 +1,5 @@
 body {
+    height: 100vh;
     background-color: #000033;
 }
 
@@ -23,8 +24,11 @@ a {
 }
 
 .card {
-    width: 220px;
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 230px;
+    height: 60vh;
     border: 3px solid #FFD700;
     margin: 10px;
     padding: 10px;
